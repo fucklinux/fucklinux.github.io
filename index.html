@@ -1,0 +1,103 @@
+<!doctype html>
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=0"> 
+		<link rel="stylesheet" href="mdui/css/mdui.min.css"> 
+		<script src="mdui/js/mdui.min.js"></script> 
+		<link rel="shortcut  icon" href="images/Fuck_Linux_LOGO_20210825.jpg" type="image/x-icon"> 
+		<title>Fuck Linux</title> 
+		<style>
+		.mdui-tooltip{
+		border-radius: 20px;
+		background-color: #EEEEEE;
+		color:black;
+		}
+		.card{
+		height: 350px;
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		}
+		@keyframes totop{
+		from {margin-top: 64px;opacity: 0;}
+		to {}
+		}
+		.totop{
+		animation-name: totop;
+		animation-duration: 1s;
+		}
+		html{
+		scroll-behavior:smooth;
+		}
+		footer{
+		border-radius: 10px 10px 0 0;
+		width: 100%;
+		text-align: center;
+		height: auto;
+		margin-top: 48px;
+		}
+		.mdui-btn,.opacity{
+		animation-name: opacity;
+		animation-duration: 1s;
+		}
+		@keyframes opacity{
+		from  {opacity: 0;}
+		to {opacity: 1;}
+		}
+		</style> 
+	</head> 
+	<body class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto mdui-appbar-with-toolbar"> 
+		<header onclick="totop()"> 
+			<div class="mdui-appbar mdui-shadow-0 mdui-appbar-scroll-hide mdui-appbar-fixed"> 
+				<div class="mdui-toolbar mdui-color-theme-accent"> <a class="mdui-typo-title opacity">Fuck Linux</a> 
+					<div class="mdui-toolbar-spacer"></div> <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '切换主题'}" onclick="theme()"> <i class="mdui-icon material-icons">brightness_medium</i> </button> 
+				</div> 
+			</div> 
+		</header> 
+		<div class="card mdui-color-theme"> 
+			<div class="totop"> 
+				<img src="images/Fuck_Linux_LOGO_20210825.jpg" style="height: 150px;width: 150px;" class="mdui-center"> 
+				<p style="font-size: 40px;text-align: center;">Fuck Linux</p> <a href="installer/install.sh" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink-accent mdui-center" style="font-size: 15px;height: 50px;width: 150px;padding: 5px;">立即下载</a> 
+			</div> 
+		</div> 
+		<div style="margin-left: 16px;margin-right: 16px;margin-top: 16px;" class="mdui-typo totop"> 
+			<p style="font-weight: bold;font-size: 20px;"><i class="mdui-icon material-icons mdui-text-color-theme">edit</i> 介绍 </p> 
+			<p style="font-size: 16px;">Fuck Linux 操作系统：一个被放弃的项目（本来就没打算做），最初由“你来坑我啊”提出。由于群内没有人会做内核，我写了一个奇怪的脚本，用来替代它。</p> 
+			<p style="font-weight: bold;font-size: 20px;"><i class="mdui-icon material-icons mdui-text-color-theme">library_books</i> 文档 </p> 
+			<p style="font-size: 16px;">这里记录了 Fuck Linux 的使用方法。 <br><br>1.首先，你需要准备 Linux 环境。如果已经准备好，请转到第 2 步。 <br>如果你在使用 Android 设备，可以使用<a href="http://od.ixcmstudio.cn/repository/main/ZeroTermux/ZeroTermux-0.117.12.apk"> ZeroTermux </a>来模拟Linux环境。 <br><br>2.<a href="installer/install.sh">在这里</a>或点击上面的“立即下载”按钮获取 Fuck Linux 安装器，并在安装器目录依次执行以下指令： <br><code>chmod +x install.sh<br>./install.sh</code> <br>安装时可以看到正在执行的步骤。Fuck Linux 会被安装到您的系统中。 <br>你可以在以后执行 <code>./start-fuck.sh</code>来启动 Fuck Linux 。 <br><br>安装过程截图： </p> 
+		</div> 
+		<img src="images/Screenshot_20210825_124204_com.termux.jpg" class="mdui-img-fluid"> 
+		<footer class="mdui-color-theme-accent"> 
+			<br> <a class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'QQ群组'}" href="https://jq.qq.com/?_wv=1027&k=EUXA1ZZs"><i class="mdui-icon material-icons">group_add</i></a> 
+			<br> 
+			<br> 
+			<div class="mdui-typo"> 
+				<p><label>主题：<a href="https://www.mdui.org/" class="mdui-color-yellow">MDUI</a></label></p> 
+			</div> 
+			<p style="font-size: 15px;font-weight: bold;">2021 - Fuck Linux</p> 
+			<br> 
+			<br> 
+		</footer> 
+		<script>
+			if (localStorage.getItem('darkTheme') == 'true' || new Date().getHours() >= 22 || new Date().getHours() < 6){
+				document.body.classList.add('mdui-theme-layout-dark');
+			}
+			function theme(){
+				if (localStorage.getItem('darkTheme') == 'true'){
+					document.body.classList.remove('mdui-theme-layout-dark');
+					localStorage.removeItem('darkTheme');
+				}
+				else{
+					document.body.classList.add('mdui-theme-layout-dark');
+					localStorage.setItem('darkTheme','true');
+				}
+			}
+		</script> 
+		<script>
+			function totop(){
+    			window.scrollTo(0,0);
+			}
+		</script>  
+	</body>
+</html>
