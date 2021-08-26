@@ -1,19 +1,18 @@
-echo 欢迎安装 Fuck Linux
-echo 按任意键继续安装，Ctrl+C 退出安装
+echo -e "\033[33m 欢迎安装 Fuck Linux \033[0m"
+echo -e "\033[33m 按回车键继续安装，Ctrl+C 退出安装 \033[0m"
 read
-echo 正在更新系统环境......
+echo -e "\033[33m 正在更新系统环境...... \033[0m"
 apt-get update
 echo -e "\033[32m 完成 \033[0m"
-echo 正在检查并安装 wget 指令......
+echo -e "\033[33m 正在检查并安装 wget 指令...... \033[0m"
 apt-get install wget
 echo -e "\033[32m 完成 \033[0m"
-echo 正在下载 Fuck Linux 启动器......
-wget https://fucklinux.github.io/installer/start-fuck.sh
+echo -e "\033[33m 正在下载 Fuck Linux 安装向导...... \033[0m"
+wget https://fucklinux.github.io/installer/setup.sh
 echo -e "\033[32m 完成 \033[0m"
-echo 正在授予可执行权限......
+echo -e "\033[33m 正在授予可执行权限...... \033[0m"
 chmod +x start-fuck.sh
 echo -e "\033[32m 完成 \033[0m"
-echo -e "\033[32m 执行 ./start-fuck.sh 可以启动系统 \033[0m"
-echo 按任意键启动......
+echo -e "\033[33m 按回车键启动安装向导 \033[0m"
 read
 ./start-fuck.sh
