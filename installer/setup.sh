@@ -39,4 +39,5 @@ echo -e "\033[32m 祝贺你， Fuck Linux 已成功安装。 \033[0m"
 echo -e "\033[33m 按回车键启动 \033[0m"
 read
 wget https://fucklinux.github.io/installer/start-fuck.sh
+chmod +x start-fuck.sh
 ./start-fuck.sh

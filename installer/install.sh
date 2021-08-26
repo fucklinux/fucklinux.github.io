@@ -11,8 +11,8 @@ echo -e "\033[33m 正在下载 Fuck Linux 安装向导...... \033[0m"
 wget https://fucklinux.github.io/installer/setup.sh
 echo -e "\033[32m 完成 \033[0m"
 echo -e "\033[33m 正在授予可执行权限...... \033[0m"
-chmod +x start-fuck.sh
+chmod +x setup.sh
 echo -e "\033[32m 完成 \033[0m"
 echo -e "\033[33m 按回车键启动安装向导 \033[0m"
 read
-./start-fuck.sh
+./setup.sh
