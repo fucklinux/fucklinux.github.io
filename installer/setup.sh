@@ -11,7 +11,7 @@ echo -e "\033[33m Fuck Linux 安装向导 \033[0m"
 echo -e "\033[33m 按回车键开始安装 \033[0m"
 read
 echo -e "\033[33m 正在检查并安装 whiptail 环境...... \033[0m"
-apt-get install whiptail
+apt-get install whiptail -y
 echo -e "\033[32m 完成 \033[0m"
 echo -e "\033[33m 按回车键继续 \033[0m"
 read
@@ -24,7 +24,7 @@ whiptail --title "Fuck Linux 安装向导" --checklist \ "位置服务：" 15 40
 whiptail --title "Fuck Linux 安装向导" --checklist \ "用户体验改进计划：" 15 40 1 \ "帮助改进 Fuck Linux" "关闭" OFF 
 whiptail --title "Fuck Linux 安装向导" --radiolist \ "选择屏幕锁定方式：" 15 40 5 \ "无" "" OFF "滑动" "当前屏幕锁定设置" ON "图案" "" OFF "PIN 码" "" OFF "密码" "" OFF
 whiptail --title "Fuck Linux 安装向导" --inputbox "设置用户名：" 15 40 Burger
-else echo Fuck Linux 安装已被取消，按下回车键退出 && read
+else echo Fuck Linux 安装已被取消，按下回车键退出 && read && exit
 fi
 clear
 echo ━┏━━━┓━━━━━━━━┏┓━━━━━━┏┓━━━━━━━━━━━━━━━━━
